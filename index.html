@@ -5,317 +5,219 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Anusar Srivastava – Portfolio</title>
 
-  <!-- ========================= -->
-  <!-- SEO OPTIMIZATION -->
-  <!-- ========================= -->
-  <meta name="description" content="Portfolio of Anusar Srivastava – Technical Associate Product Manager specializing in AI dataset operations, QA, automation, and product workflows." />
-  <meta name="keywords" content="Anusar Srivastava, Product Manager, AI Operations, QA Engineer, Automation, Selenium, Python, Portfolio" />
+  <!-- Meta SEO -->
+  <meta name="description" content="Portfolio of Anusar Srivastava – Technical Associate Product Manager specializing in AI dataset operations, QA, automation, and workflow design." />
+  <meta name="keywords" content="AI, QA, Automation, Product Manager, LLM, Dataset Operations" />
   <meta name="author" content="Anusar Srivastava" />
 
-  <!-- ========================= -->
-  <!-- OPEN GRAPH (PREVIEW) -->
-  <!-- ========================= -->
+  <!-- OG Preview -->
   <meta property="og:title" content="Anusar Srivastava – Technical Associate Product Manager" />
-  <meta property="og:description" content="AI • Product • QA • Automation | Explore my complete portfolio." />
+  <meta property="og:description" content="AI • Product • QA • Automation | Explore my work, skills, and achievements." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="assets/banner.png" />
   <meta property="og:url" content="https://anusarsrivastava.github.io" />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- Tailwind CSS -->
+  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- AOS Scroll Animations -->
+  <!-- AOS Animations -->
   <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet" />
 
-  <!-- Typed.js -->
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-
-  <!-- Lottie Player -->
-  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-
-  <!-- Smooth transitions -->
+  <!-- Smooth transition -->
   <style>
-    * { transition: background-color .4s ease, color .4s ease; }
-
-    .tilt-card { transition: transform .2s ease; }
-    .tilt-card:hover { transform: translateY(-6px) scale(1.02); }
-
-    .modal-bg { backdrop-filter: blur(8px); }
+    * { transition: 0.3s ease; }
+    .tilt-card:hover { transform: translateY(-6px); }
   </style>
 
+  <!-- Dark Mode Auto -->
   <script>
-    if(localStorage.theme === 'dark'
-        || (!('theme' in localStorage) &&
-            window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    if (localStorage.theme === 'dark' ||
+       (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
       document.documentElement.classList.add('dark')
     } else {
       document.documentElement.classList.remove('dark')
     }
   </script>
-
 </head>
 
-<body class="bg-slate-950 text-slate-100 antialiased">
+<body class="bg-black text-gray-100">
 
-<!-- Floating Contact Icons -->
-<div class="fixed bottom-6 right-6 flex flex-col gap-3 z-50">
-  <a href="mailto:anusarsrivastava@gmail.com"
-     class="p-3 rounded-full bg-sky-500 hover:bg-sky-400 text-black shadow-xl">✉️</a>
-
-  <a href="#" 
-     class="p-3 rounded-full bg-slate-700 hover:bg-slate-600 shadow-xl">in</a>
-</div>
-
-<!-- NAVBAR -->
-<header class="sticky top-0 bg-slate-950/90 backdrop-blur border-b border-slate-800 z-40">
-  <nav class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-
+<!-- Navigation -->
+<header class="sticky top-0 bg-black/80 backdrop-blur border-b border-gray-800 z-40">
+  <nav class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
     <div class="flex items-center gap-2">
-      <div class="h-8 w-8 rounded-lg bg-sky-500/20 border border-sky-400 flex items-center justify-center text-sky-400 font-bold">A</div>
-      <h1 class="font-semibold tracking-tight">Anusar Srivastava</h1>
+      <div class="h-8 w-8 bg-sky-500/20 border border-sky-500 text-sky-400 rounded-lg flex items-center justify-center">A</div>
+      <span class="font-semibold">Anusar Srivastava</span>
     </div>
 
-    <div class="hidden md:flex gap-6 text-sm text-slate-300">
+    <div class="hidden md:flex gap-6 text-sm">
       <a href="#about" class="hover:text-sky-400">About</a>
-      <a href="#timeline" class="hover:text-sky-400">Experience</a>
+      <a href="#experience" class="hover:text-sky-400">Experience</a>
       <a href="#skills" class="hover:text-sky-400">Skills</a>
       <a href="#projects" class="hover:text-sky-400">Projects</a>
       <a href="#certifications" class="hover:text-sky-400">Certifications</a>
       <a href="#contact" class="hover:text-sky-400">Contact</a>
     </div>
 
-    <button onclick="toggleTheme()"
-      class="ml-4 px-3 py-1 rounded-md border border-slate-600 hover:bg-slate-800 text-xs">
+    <button onclick="toggleTheme()" class="text-sm border border-gray-600 px-2 py-1 rounded">
       🌓
     </button>
 
     <script>
       function toggleTheme() {
-        document.documentElement.classList.toggle('dark');
+        document.documentElement.classList.toggle('dark')
         localStorage.theme =
-          document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+          document.documentElement.classList.contains('dark') ? 'dark' : 'light'
       }
     </script>
-
   </nav>
 </header>
 
-<!-- HERO SECTION -->
-<section class="bg-gradient-to-b from-slate-900 to-slate-950">
-  <div class="max-w-6xl mx-auto px-4 py-16 grid lg:grid-cols-2 gap-12 items-center">
+<!-- Hero -->
+<section class="py-20 bg-gradient-to-b from-gray-900 to-black">
+  <div class="max-w-6xl mx-auto px-6 lg:grid lg:grid-cols-2 gap-16 flex flex-col-reverse">
 
-    <!-- Left Text -->
+    <!-- RIGHT — Tech SVG -->
+    <div class="flex justify-center lg:justify-end mb-10 lg:mb-0" data-aos="zoom-in">
+      <div class="h-56 w-56 md:h-64 md:w-64 rounded-full bg-gray-900 border border-gray-700 shadow-xl flex items-center justify-center p-10">
+        <svg width="100%" height="100%" viewBox="0 0 48 48" fill="none"
+          xmlns="http://www.w3.org/2000/svg" class="text-sky-400">
+          <path d="M24 4L29 10H19L24 4Z" stroke="currentColor" stroke-width="2"/>
+          <rect x="10" y="14" width="28" height="20" rx="3" stroke="currentColor" stroke-width="2"/>
+          <path d="M18 20H30M18 26H26" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="36" cy="36" r="6" stroke="currentColor" stroke-width="2"/>
+          <path d="M33 36H39" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <path d="M36 33V39" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </div>
+    </div>
+
+    <!-- LEFT TEXT -->
     <div data-aos="fade-up">
-      <p class="text-xs text-sky-400 tracking-widest">AI · PRODUCT · QA · AUTOMATION</p>
+      <p class="text-sky-400 font-semibold text-sm tracking-widest uppercase">AI • PRODUCT • QA • AUTOMATION</p>
 
-      <h2 class="mt-3 text-4xl md:text-5xl font-bold leading-tight">
-        <span id="typing"></span>
-      </h2>
+      <h1 class="mt-4 text-4xl md:text-5xl font-bold leading-tight text-white">
+        Technical Associate Product Manager
+      </h1>
 
-      <p class="mt-4 text-slate-300 text-base md:text-lg leading-relaxed">
-        I build scalable AI workflows, automate operations, and ensure data quality with strong product and QA foundations.
+      <p class="mt-4 text-gray-300 text-lg leading-relaxed">
+        Working across AI dataset operations, automation engineering, product documentation,
+        internal auditing, and workflow quality — delivering scalable systems and reliable execution.
       </p>
 
       <div class="mt-6 flex flex-wrap gap-4">
         <a href="assets/Anusar_Resume_2025.pdf"
-          class="px-5 py-2.5 rounded-lg bg-sky-500 hover:bg-sky-400 text-black font-medium shadow-lg">
+           class="px-5 py-2.5 rounded-lg bg-sky-500 hover:bg-sky-400 text-black font-medium shadow-md">
           Download Resume
         </a>
 
         <a href="assets/Anusar_Featured_Portfolio.pdf"
-          class="px-5 py-2.5 rounded-lg border border-slate-700 text-slate-200 hover:bg-slate-900">
-          Download Portfolio
+           class="px-5 py-2.5 rounded-lg border border-gray-600 text-white hover:bg-gray-900 shadow-md">
+          View Portfolio
         </a>
       </div>
     </div>
-
-    <!-- Photo + Lottie -->
-    <div class="flex flex-col items-center gap-4 lg:items-end" data-aos="zoom-in">
-
-      <div class="h-56 w-56 md:h-64 md:w-64 rounded-full overflow-hidden shadow-2xl border border-slate-700 flex items-center justify-center bg-slate-900">
-        <span class="text-slate-500 text-xs">Upload Your Photo</span>
-      </div>
-
-      <!-- HERO LOTTIE (AI Circuit Animation) -->
-      <lottie-player
-        src="https://assets4.lottiefiles.com/packages/lf20_puciaact.json"
-        background="transparent"
-        speed="1"
-        style="width: 130px; height: 130px;"
-        loop
-        autoplay>
-      </lottie-player>
-    </div>
-
   </div>
 </section>
 
 <!-- ABOUT -->
-<section id="about" class="py-14 border-t border-slate-800" data-aos="fade-up">
-  <div class="max-w-6xl mx-auto px-4">
-    <h2 class="text-3xl font-semibold mb-4">About</h2>
-    <p class="text-slate-300 text-base leading-relaxed">
-      I specialize in AI dataset operations, automation engineering, product workflow design,
-      and internal audit & QA for high-scale environments. I bridge technical execution with
-      process quality, delivering efficiency and reliability in AI-driven systems.
+<section id="about" class="py-16 border-t border-gray-800" data-aos="fade-up">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="text-3xl font-semibold mb-4">About Me</h2>
+    <p class="text-gray-300 leading-relaxed">
+      I specialize in AI dataset operations, automation engineering, internal auditing, QA testing,
+      and product execution. I help build scalable pipelines, optimize workflows, automate repetitive
+      tasks, and ensure data quality for high-volume AI training environments.
     </p>
   </div>
 </section>
 
-<!-- EXPERIENCE TIMELINE -->
-<section id="timeline" class="py-14 border-t border-slate-800">
-  <div class="max-w-6xl mx-auto px-4">
+<!-- EXPERIENCE -->
+<section id="experience" class="py-16 border-t border-gray-800">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="text-3xl font-semibold mb-10">Experience</h2>
 
-    <div class="flex items-center gap-3 mb-8" data-aos="fade-up">
-      <h2 class="text-3xl font-semibold">Experience Timeline</h2>
+    <div class="relative border-l border-gray-700 ml-4 space-y-12">
 
-      <!-- Timeline Lottie -->
-      <lottie-player
-        src="https://assets2.lottiefiles.com/packages/lf20_wkebwzpz.json"
-        background="transparent"
-        speed="1"
-        style="width: 50px; height: 50px;"
-        loop autoplay>
-      </lottie-player>
-    </div>
-
-    <div class="relative border-l border-slate-700 ml-4 space-y-10">
-
-      <!-- Job 1 -->
       <div class="ml-6" data-aos="fade-up">
-        <div class="w-4 h-4 bg-sky-500 rounded-full absolute -left-2 border border-white"></div>
+        <div class="absolute -left-2 w-4 h-4 bg-sky-500 border-white border rounded-full"></div>
         <h3 class="text-xl font-semibold text-sky-400">Technical Associate Product Manager</h3>
-        <p class="text-sm text-slate-400">Dec 2025 – Present</p>
-        <p class="mt-2 text-slate-300">
-          Leading AI product workflows, dataset systems, validation frameworks, and cross-team operations.
-        </p>
+        <p class="text-gray-400 text-sm">Dec 2025 – Present | InfoBay AI (formerly EduGorilla)</p>
+        <p class="mt-2 text-gray-300">Managing AI data workflows, validation systems, automation pipelines, and cross-team coordination.</p>
       </div>
 
-      <!-- Job 2 -->
       <div class="ml-6" data-aos="fade-up">
-        <div class="w-4 h-4 bg-sky-500 rounded-full absolute -left-2 border border-white"></div>
+        <div class="absolute -left-2 w-4 h-4 bg-sky-500 border-white border rounded-full"></div>
         <h3 class="text-xl font-semibold text-sky-400">Internal Auditor Manager</h3>
-        <p class="text-sm text-slate-400">Jan 2025 – Dec 2025</p>
-        <p class="mt-2 text-slate-300">
-          Built SOPs, audited dataset workflows, and improved operational accuracy.
-        </p>
+        <p class="text-gray-400 text-sm">Jan 2025 – Dec 2025</p>
+        <p class="mt-2 text-gray-300">Audited processes, built SOPs, improved dataset quality & workflow efficiency.</p>
       </div>
 
-      <!-- Job 3 -->
       <div class="ml-6" data-aos="fade-up">
-        <div class="w-4 h-4 bg-sky-500 rounded-full absolute -left-2 border border-white"></div>
+        <div class="absolute -left-2 w-4 h-4 bg-sky-500 border-white border rounded-full"></div>
         <h3 class="text-xl font-semibold text-sky-400">Manual QA Engineer & Senior Auditor</h3>
-        <p class="text-sm text-slate-400">2023 – 2024</p>
-        <p class="mt-2 text-slate-300">
-          Performed UI, functional, regression testing & dataset validations.
-        </p>
+        <p class="text-gray-400 text-sm">2023 – 2024</p>
+        <p class="mt-2 text-gray-300">Performed functional, UI, regression & data validation testing for internal systems.</p>
       </div>
 
     </div>
   </div>
 </section>
-
 
 <!-- SKILLS -->
-<section id="skills" class="py-14 border-t border-slate-800" data-aos="fade-up">
-  <div class="max-w-6xl mx-auto px-4">
+<section id="skills" class="py-16 border-t border-gray-800" data-aos="fade-up">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="text-3xl font-semibold mb-10">Skills</h2>
 
-    <div class="flex items-center gap-3 mb-8">
-      <h2 class="text-3xl font-semibold">Skills</h2>
+    <div class="grid md:grid-cols-3 gap-6">
 
-      <!-- Skills Lottie -->
-      <lottie-player
-        src="https://assets7.lottiefiles.com/packages/lf20_tno6cg2w.json"
-        background="transparent"
-        speed="1"
-        style="width: 42px; height: 42px;"
-        loop autoplay>
-      </lottie-player>
-    </div>
+      <div class="p-6 rounded-xl bg-gray-900 border border-gray-700 tilt-card">
+        <h3 class="text-lg font-semibold mb-3">AI & Product</h3>
+        <p class="text-sm">AI Dataset Ops</p>
+        <div class="h-2 bg-gray-800 rounded mt-1"><div class="h-full w-[90%] bg-sky-500 rounded"></div></div>
 
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-
-      <!-- AI & Product -->
-      <div class="p-6 rounded-xl bg-slate-900/40 border border-slate-800 tilt-card">
-        <h3 class="text-lg font-semibold mb-2">AI & Product</h3>
-        <p class="text-sm text-slate-300">AI Dataset Ops</p>
-        <div class="h-2 bg-slate-700 rounded">
-          <div class="h-full bg-sky-500 w-[90%]"></div>
-        </div>
-
-        <p class="text-sm mt-3 text-slate-300">Product Documentation</p>
-        <div class="h-2 bg-slate-700 rounded">
-          <div class="h-full bg-sky-500 w-[85%]"></div>
-        </div>
+        <p class="text-sm mt-4">Product Requirements</p>
+        <div class="h-2 bg-gray-800 rounded mt-1"><div class="h-full w-[85%] bg-sky-500 rounded"></div></div>
       </div>
 
-      <!-- QA & Audit -->
-      <div class="p-6 rounded-xl bg-slate-900/40 border border-slate-800 tilt-card">
-        <h3 class="text-lg font-semibold mb-2">QA & Audit</h3>
-        <p class="text-sm text-slate-300">Functional Testing</p>
-        <div class="h-2 bg-slate-700 rounded">
-          <div class="h-full bg-emerald-500 w-[90%]"></div>
-        </div>
+      <div class="p-6 rounded-xl bg-gray-900 border border-gray-700 tilt-card">
+        <h3 class="text-lg font-semibold mb-3">QA & Audit</h3>
+        <p class="text-sm">Functional Testing</p>
+        <div class="h-2 bg-gray-800 rounded mt-1"><div class="h-full w-[90%] bg-emerald-500 rounded"></div></div>
 
-        <p class="text-sm mt-3 text-slate-300">Internal Auditing</p>
-        <div class="h-2 bg-slate-700 rounded">
-          <div class="h-full bg-emerald-500 w-[85%]"></div>
-        </div>
+        <p class="text-sm mt-4">Internal Auditing</p>
+        <div class="h-2 bg-gray-800 rounded mt-1"><div class="h-full w-[85%] bg-emerald-500 rounded"></div></div>
       </div>
 
-      <!-- Automation -->
-      <div class="p-6 rounded-xl bg-slate-900/40 border border-slate-800 tilt-card">
-        <h3 class="text-lg font-semibold mb-2">Automation</h3>
-        <p class="text-sm text-slate-300">Python Automation</p>
-        <div class="h-2 bg-slate-700 rounded">
-          <div class="h-full bg-violet-500 w-[88%]"></div>
-        </div>
+      <div class="p-6 rounded-xl bg-gray-900 border border-gray-700 tilt-card">
+        <h3 class="text-lg font-semibold mb-3">Automation</h3>
+        <p class="text-sm">Python Automation</p>
+        <div class="h-2 bg-gray-800 rounded mt-1"><div class="h-full w-[88%] bg-violet-500 rounded"></div></div>
 
-        <p class="text-sm mt-3 text-slate-300">Selenium</p>
-        <div class="h-2 bg-slate-700 rounded">
-          <div class="h-full bg-violet-500 w-[80%]"></div>
-        </div>
+        <p class="text-sm mt-4">Selenium</p>
+        <div class="h-2 bg-gray-800 rounded mt-1"><div class="h-full w-[80%] bg-violet-500 rounded"></div></div>
       </div>
 
     </div>
   </div>
 </section>
-<!-- PROJECTS WITH MODALS -->
-<section id="projects" class="py-14 border-t border-slate-800">
-  <div class="max-w-6xl mx-auto px-4" data-aos="fade-up">
 
-    <div class="flex items-center gap-3 mb-8">
-      <h2 class="text-3xl font-semibold">Projects</h2>
-
-      <!-- Projects Lottie -->
-      <lottie-player
-        src="https://assets9.lottiefiles.com/packages/lf20_1pxqjqps.json"
-        background="transparent"
-        speed="1"
-        style="width: 42px; height: 42px;"
-        loop autoplay>
-      </lottie-player>
-    </div>
+<!-- PROJECTS -->
+<section id="projects" class="py-16 border-t border-gray-800">
+  <div class="max-w-6xl mx-auto px-6" data-aos="fade-up">
+    <h2 class="text-3xl font-semibold mb-10">Projects</h2>
 
     <div class="grid md:grid-cols-2 gap-6">
 
-      <!-- Project 1 -->
-      <div onclick="openModal('project1')"
-           class="p-6 rounded-xl bg-slate-900/40 border border-slate-800 hover:border-sky-500 hover:cursor-pointer tilt-card">
+      <div class="p-6 rounded-xl bg-gray-900 border border-gray-700 tilt-card" onclick="openModal('project1')">
         <h3 class="text-lg font-semibold mb-2">AI Dataset Pipelines</h3>
-        <p class="text-sm text-slate-300">
-          Validation systems ensuring dataset quality for multilingual AI workloads.
-        </p>
+        <p class="text-gray-300 text-sm">Built validation flows for multilingual AI datasets.</p>
       </div>
 
-      <!-- Project 2 -->
-      <div onclick="openModal('project2')"
-           class="p-6 rounded-xl bg-slate-900/40 border border-slate-800 hover:border-sky-500 hover:cursor-pointer tilt-card">
+      <div class="p-6 rounded-xl bg-gray-900 border border-gray-700 tilt-card" onclick="openModal('project2')">
         <h3 class="text-lg font-semibold mb-2">Automation Tools</h3>
-        <p class="text-sm text-slate-300">
-          Python & Selenium automation for QA, metadata extraction, workflow validation.
-        </p>
+        <p class="text-gray-300 text-sm">Python + Selenium automation for QA and workflow optimization.</p>
       </div>
 
     </div>
@@ -323,37 +225,25 @@
 </section>
 
 <!-- CERTIFICATIONS -->
-<section id="certifications" class="py-14 border-t border-slate-800" data-aos="fade-up">
-  <div class="max-w-6xl mx-auto px-4">
+<section id="certifications" class="py-16 border-t border-gray-800" data-aos="fade-up">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="text-3xl font-semibold mb-10">Certifications</h2>
 
-    <div class="flex items-center gap-3 mb-8">
-      <h2 class="text-3xl font-semibold">Certifications</h2>
+    <div class="grid md:grid-cols-3 gap-6">
 
-      <!-- Certifications Lottie -->
-      <lottie-player
-        src="https://assets2.lottiefiles.com/private_files/lf30_glnn2gxb.json"
-        background="transparent"
-        speed="1"
-        style="width: 42px; height: 42px;"
-        loop autoplay>
-      </lottie-player>
-    </div>
-
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-      <div class="p-6 rounded-xl bg-slate-900/40 border border-slate-800 tilt-card">
+      <div class="p-6 rounded-xl bg-gray-900 border border-gray-700 tilt-card">
         <h3 class="text-lg font-semibold text-sky-400">Product Management Fundamentals</h3>
-        <p class="text-sm text-slate-300 mt-2">Issued by: LinkedIn Learning</p>
+        <p class="text-sm text-gray-300 mt-2">LinkedIn Learning</p>
       </div>
 
-      <div class="p-6 rounded-xl bg-slate-900/40 border border-slate-800 tilt-card">
+      <div class="p-6 rounded-xl bg-gray-900 border border-gray-700 tilt-card">
         <h3 class="text-lg font-semibold text-sky-400">Python for Automation</h3>
-        <p class="text-sm text-slate-300 mt-2">Issued by: Coursera</p>
+        <p class="text-sm text-gray-300 mt-2">Coursera</p>
       </div>
 
-      <div class="p-6 rounded-xl bg-slate-900/40 border border-slate-800 tilt-card">
+      <div class="p-6 rounded-xl bg-gray-900 border border-gray-700 tilt-card">
         <h3 class="text-lg font-semibold text-sky-400">Software QA Testing</h3>
-        <p class="text-sm text-slate-300 mt-2">Issued by: Udemy</p>
+        <p class="text-sm text-gray-300 mt-2">Udemy</p>
       </div>
 
     </div>
@@ -361,50 +251,36 @@
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="py-14 border-t border-slate-800" data-aos="fade-up">
-  <div class="max-w-6xl mx-auto px-4">
+<section id="contact" class="py-16 border-t border-gray-800" data-aos="fade-up">
+  <div class="max-w-6xl mx-auto px-6">
     <h2 class="text-3xl font-semibold mb-4">Contact</h2>
 
-    <p class="text-sm text-slate-300">
-      Open to opportunities in AI operations, product execution, QA leadership, and automation.
-    </p>
+    <p class="text-gray-300 text-sm">Feel free to reach out</p>
 
-    <div class="mt-4 text-sm space-y-2">
-      <p><span class="font-semibold">Email:</span> anusarsrivastava@gmail.com</p>
-      <p><span class="font-semibold">Location:</span> Lucknow, Uttar Pradesh, India</p>
+    <div class="mt-4 text-sm text-gray-400">
+      <p><strong>Email:</strong> anusarsrivastava@gmail.com</p>
+      <p><strong>Location:</strong> Lucknow, Uttar Pradesh, India</p>
     </div>
   </div>
 </section>
 
 <!-- FOOTER -->
-<footer class="py-4 border-t border-slate-800 text-center text-xs text-slate-500">
-  © <span id="year"></span> Anusar Srivastava · AI · Product · QA · Automation
+<footer class="py-6 border-t border-gray-800 text-center text-gray-500 text-xs">
+  © <span id="year"></span> Anusar Srivastava — AI • Product • QA • Automation
 </footer>
 
-<!-- ========================= -->
-<!-- PROJECT MODALS -->
-<!-- ========================= -->
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 
-<div id="modal-bg" class="fixed inset-0 hidden items-center justify-center bg-black/60 modal-bg z-50">
-  <div id="modal-box"
-       class="bg-slate-900 rounded-xl p-6 w-[90%] max-w-lg border border-slate-700 shadow-xl scale-95 opacity-0 transition">
-    <h3 id="modal-title" class="text-xl font-bold text-sky-400"></h3>
-    <p id="modal-desc" class="text-slate-300 mt-2 leading-relaxed"></p>
+<!-- Project Modals -->
+<div id="modal-bg" class="fixed inset-0 hidden bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center">
+  <div id="modal-box" class="bg-gray-900 border border-gray-700 rounded-xl p-6 w-[90%] max-w-lg shadow-xl scale-95 opacity-0 transition">
+    <h3 id="modal-title" class="text-xl font-semibold text-sky-400"></h3>
+    <p id="modal-desc" class="text-gray-300 mt-3"></p>
+    <p id="modal-tech" class="text-gray-400 text-sm mt-3"></p>
 
-    <div class="mt-4">
-      <h4 class="font-semibold text-slate-100 text-sm">Tech Stack:</h4>
-      <p id="modal-tech" class="text-slate-300 text-sm"></p>
-    </div>
-
-    <div id="modal-download" class="mt-5 hidden">
-      <a id="download-link"
-         class="px-4 py-2 bg-sky-500 text-black rounded hover:bg-sky-400 block text-center">
-        View Case Study
-      </a>
-    </div>
-
-    <button onclick="closeModal()"
-            class="mt-6 px-4 py-2 text-sm border border-slate-600 rounded hover:bg-slate-800 w-full">
+    <button onclick="closeModal()" class="w-full mt-6 px-4 py-2 border border-gray-700 rounded hover:bg-gray-800">
       Close
     </button>
   </div>
@@ -417,32 +293,24 @@
   const modalData = {
     project1: {
       title: "AI Dataset Pipelines",
-      desc: "Designed validation pipelines for multilingual AI datasets, ensuring consistency, quality, and readiness for large-scale LLM training workflows.",
-      tech: "Python, QA Frameworks, Validation Scripts, Internal Tools",
-      link: "assets/CaseStudy_AI_Datasets.pdf"
+      desc: "Designed dataset validation flows for multilingual AI workloads. Improved quality consistency and ensured readiness for LLM training.",
+      tech: "Python, Dataset Validation, Internal Tools"
     },
     project2: {
       title: "Automation Tools",
-      desc: "Built Selenium + Python automation for QA flows, metadata extraction, sorting, batching, and operational workflow optimization.",
-      tech: "Python, Selenium, Automation, Data Validation",
-      link: "assets/CaseStudy_Automation.pdf"
+      desc: "Built Selenium & Python automation for QA flows, metadata sorting, batching, extraction and workflow accuracy.",
+      tech: "Python, Selenium, Automation Frameworks"
     }
   };
 
   function openModal(key) {
     const data = modalData[key];
-
     document.getElementById("modal-title").innerText = data.title;
     document.getElementById("modal-desc").innerText = data.desc;
-    document.getElementById("modal-tech").innerText = data.tech;
-
-    document.getElementById("download-link").href = data.link;
-    document.getElementById("modal-download").classList.remove("hidden");
+    document.getElementById("modal-tech").innerText = "Tech: " + data.tech;
 
     modalBG.classList.remove("hidden");
-    setTimeout(() => {
-      modalBox.classList.remove("scale-95", "opacity-0");
-    }, 10);
+    setTimeout(() => modalBox.classList.remove("scale-95", "opacity-0"), 10);
   }
 
   function closeModal() {
@@ -451,34 +319,9 @@
   }
 </script>
 
-<!-- Typed.js -->
-<script>
-  var typed = new Typed('#typing', {
-    strings: [
-      "Technical Associate Product Manager",
-      "AI Workflow & Dataset Specialist",
-      "QA & Automation Expert",
-      "Process Architect & Auditor"
-    ],
-    typeSpeed: 45,
-    backSpeed: 25,
-    loop: true
-  });
-</script>
-
 <!-- AOS Init -->
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script>
-  AOS.init({
-    duration: 900,
-    once: true
-  });
-</script>
-
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
+<script> AOS.init({ duration: 900, once: true }); </script>
 
 </body>
-  </html>
-        
+</html>
