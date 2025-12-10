@@ -1,327 +1,401 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Anusar Srivastava – Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Meta SEO -->
-  <meta name="description" content="Portfolio of Anusar Srivastava – Technical Associate Product Manager specializing in AI dataset operations, QA, automation, and workflow design." />
-  <meta name="keywords" content="AI, QA, Automation, Product Manager, LLM, Dataset Operations" />
-  <meta name="author" content="Anusar Srivastava" />
-
-  <!-- OG Preview -->
-  <meta property="og:title" content="Anusar Srivastava – Technical Associate Product Manager" />
-  <meta property="og:description" content="AI • Product • QA • Automation | Explore my work, skills, and achievements." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="assets/banner.png" />
-  <meta property="og:url" content="https://anusarsrivastava.github.io" />
-  <meta name="twitter:card" content="summary_large_image" />
-
-  <!-- Tailwind -->
+  <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- AOS Animations -->
-  <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet" />
-
-  <!-- Smooth transition -->
-  <style>
-    * { transition: 0.3s ease; }
-    .tilt-card:hover { transform: translateY(-6px); }
-  </style>
-
-  <!-- Dark Mode Auto -->
-  <script>
-    if (localStorage.theme === 'dark' ||
-       (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-      document.documentElement.classList.add('dark')
-    } else {
-      document.documentElement.classList.remove('dark')
-    }
-  </script>
 </head>
+<body class="bg-slate-950 text-slate-100 antialiased">
 
-<body class="bg-black text-gray-100">
+  <!-- Page Wrapper -->
+  <div class="min-h-screen flex flex-col">
 
-<!-- Navigation -->
-<header class="sticky top-0 bg-black/80 backdrop-blur border-b border-gray-800 z-40">
-  <nav class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-    <div class="flex items-center gap-2">
-      <div class="h-8 w-8 bg-sky-500/20 border border-sky-500 text-sky-400 rounded-lg flex items-center justify-center">A</div>
-      <span class="font-semibold">Anusar Srivastava</span>
-    </div>
+    <!-- NAVBAR -->
+    <header class="border-b border-slate-800/80 bg-slate-950/80 backdrop-blur sticky top-0 z-30">
+      <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-14">
+        <div class="flex items-center gap-2">
+          <div class="h-8 w-8 rounded-xl bg-sky-500/10 border border-sky-500/40 flex items-center justify-center text-sky-400 text-lg font-semibold">
+            A
+          </div>
+          <span class="font-semibold tracking-tight text-slate-50">
+            Anusar Srivastava
+          </span>
+        </div>
+        <div class="hidden sm:flex gap-6 text-sm text-slate-300">
+          <a href="#about" class="hover:text-sky-400">About</a>
+          <a href="#experience" class="hover:text-sky-400">Experience</a>
+          <a href="#education" class="hover:text-sky-400">Education</a>
+          <a href="#certifications" class="hover:text-sky-400">Certifications</a>
+          <a href="#skills" class="hover:text-sky-400">Skills</a>
+          <a href="#projects" class="hover:text-sky-400">Projects</a>
+          <a href="#contact" class="hover:text-sky-400">Contact</a>
+        </div>
+      </nav>
+    </header>
 
-    <div class="hidden md:flex gap-6 text-sm">
-      <a href="#about" class="hover:text-sky-400">About</a>
-      <a href="#experience" class="hover:text-sky-400">Experience</a>
-      <a href="#skills" class="hover:text-sky-400">Skills</a>
-      <a href="#projects" class="hover:text-sky-400">Projects</a>
-      <a href="#certifications" class="hover:text-sky-400">Certifications</a>
-      <a href="#contact" class="hover:text-sky-400">Contact</a>
-    </div>
+    <!-- MAIN CONTENT -->
+    <main class="flex-1">
 
-    <button onclick="toggleTheme()" class="text-sm border border-gray-600 px-2 py-1 rounded">
-      🌓
-    </button>
+      <!-- HERO -->
+      <section class="border-b border-slate-800 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 grid lg:grid-cols-2 gap-10 items-center">
 
-    <script>
-      function toggleTheme() {
-        document.documentElement.classList.toggle('dark')
-        localStorage.theme =
-          document.documentElement.classList.contains('dark') ? 'dark' : 'light'
-      }
-    </script>
-  </nav>
-</header>
+          <!-- Left -->
+          <div>
+            <p class="text-xs font-semibold tracking-[0.25em] text-sky-400 mb-4">
+              AI · PRODUCT · QA · AUTOMATION
+            </p>
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-slate-50">
+              Technical Associate Product Manager
+            </h1>
+            <p class="mt-4 text-lg text-slate-300">
+              AI & LLM dataset operations, internal audit & QA, and automation engineering —
+              building reliable data and workflows for modern AI products.
+            </p>
 
-<!-- Hero -->
-<section class="py-20 bg-gradient-to-b from-gray-900 to-black">
-  <div class="max-w-6xl mx-auto px-6 lg:grid lg:grid-cols-2 gap-16 flex flex-col-reverse">
+            <div class="mt-6 flex flex-wrap gap-3">
+              <span class="inline-flex items-center gap-2 rounded-full border border-sky-500/40 bg-sky-500/10 px-3 py-1 text-xs font-medium text-sky-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" stroke="currentColor">
+                  <rect x="4" y="4" width="16" height="16" rx="2" />
+                  <path d="M9 9h6v6H9z" />
+                </svg>
+                AI & LLM Training Datasets
+              </span>
 
-    <!-- RIGHT — Tech SVG -->
-    <div class="flex justify-center lg:justify-end mb-10 lg:mb-0" data-aos="zoom-in">
-      <div class="h-56 w-56 md:h-64 md:w-64 rounded-full bg-gray-900 border border-gray-700 shadow-xl flex items-center justify-center p-10">
-        <svg width="100%" height="100%" viewBox="0 0 48 48" fill="none"
-          xmlns="http://www.w3.org/2000/svg" class="text-sky-400">
-          <path d="M24 4L29 10H19L24 4Z" stroke="currentColor" stroke-width="2"/>
-          <rect x="10" y="14" width="28" height="20" rx="3" stroke="currentColor" stroke-width="2"/>
-          <path d="M18 20H30M18 26H26" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-          <circle cx="36" cy="36" r="6" stroke="currentColor" stroke-width="2"/>
-          <path d="M33 36H39" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-          <path d="M36 33V39" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        </svg>
+              <span class="inline-flex items-center gap-2 rounded-full border border-emerald-500/40 bg-emerald-500/10 px-3 py-1 text-xs font-medium text-emerald-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" stroke="currentColor">
+                  <path d="M5 12h14M12 5v14" />
+                </svg>
+                Product & Process Design
+              </span>
+
+              <span class="inline-flex items-center gap-2 rounded-full border border-violet-500/40 bg-violet-500/10 px-3 py-1 text-xs font-medium text-violet-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" stroke="currentColor">
+                  <path d="M5 3v4M19 3v4M5 17v4M19 17v4" />
+                  <rect x="4" y="7" width="16" height="10" rx="2" />
+                </svg>
+                Internal Audit & QA
+              </span>
+
+              <span class="inline-flex items-center gap-2 rounded-full border border-amber-500/40 bg-amber-500/10 px-3 py-1 text-xs font-medium text-amber-200">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" stroke="currentColor">
+                  <path d="M10.5 20.5 19 4.5M4 4.5h7M5 20.5h7" />
+                </svg>
+                Automation (Python · Selenium)
+              </span>
+            </div>
+
+            <div class="mt-8 flex flex-wrap gap-4">
+              <a href="#contact" class="inline-flex items-center justify-center rounded-xl bg-sky-500 hover:bg-sky-400 px-5 py-2.5 text-sm font-semibold text-slate-950 shadow-lg shadow-sky-500/30">
+                Contact Me
+              </a>
+              <a href="#experience" class="inline-flex items-center justify-center rounded-xl border border-slate-700 px-5 py-2.5 text-sm font-medium text-slate-200 hover:bg-slate-900">
+                View Experience
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Box -->
+          <div class="relative">
+            <div class="absolute -inset-6 bg-sky-500/20 blur-3xl rounded-full opacity-50"></div>
+            <div class="relative rounded-3xl border border-slate-800 bg-slate-900/70 p-6 shadow-2xl">
+              <p class="text-xs font-semibold text-slate-400 tracking-[0.2em] mb-2">SNAPSHOT</p>
+              <h2 class="text-xl font-semibold text-slate-50 mb-4">AI · Product · QA · Automation</h2>
+
+              <ul class="space-y-3 text-sm text-slate-300">
+                <li class="flex gap-2">
+                  <span class="mt-1 h-1.5 w-1.5 rounded-full bg-sky-400"></span>
+                  6+ years across AI operations, SaaS platforms, auditing, automation, and data workflows.
+                </li>
+                <li class="flex gap-2">
+                  <span class="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
+                  Experience leading teams, defining processes, and improving product delivery.
+                </li>
+                <li class="flex gap-2">
+                  <span class="mt-1 h-1.5 w-1.5 rounded-full bg-violet-400"></span>
+                  Hands-on with Python, Selenium, and QA for scalable systems.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" class="border-b border-slate-800 bg-slate-950">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <h2 class="text-xl font-semibold text-slate-50 mb-3">About</h2>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            I am a multidisciplinary professional working at the intersection of AI,
+            product execution, QA, audit, and workflow automation.
+          </p>
+          <p class="mt-3 text-sm text-slate-300 leading-relaxed">
+            As a Technical Associate Product Manager, I work cross-functionally with
+            engineering, operations, audit, and QA teams to build scalable datasets,
+            define requirements, create documentation, and improve efficiency & reliability
+            across AI data workflows.
+          </p>
+        </div>
+      </section>
+
+      <!-- EXPERIENCE -->
+      <section id="experience" class="border-b border-slate-800 bg-slate-950">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <h2 class="text-xl font-semibold text-slate-50 mb-6">Experience</h2>
+
+          <div class="space-y-8">
+
+            <article class="border border-slate-800 rounded-2xl p-5 bg-slate-900/60">
+              <div class="flex justify-between flex-wrap gap-2">
+                <div>
+                  <h3 class="font-semibold text-slate-50">Technical Associate Product Manager</h3>
+                  <p class="text-sm text-slate-400">InfoBay AI (formerly EduGorilla)</p>
+                </div>
+                <p class="text-xs text-slate-400">Dec 2025 – Present</p>
+              </div>
+              <ul class="mt-3 space-y-2 text-sm text-slate-300">
+                <li>Lead AI dataset workflow design and internal product execution.</li>
+                <li>Define requirements, documentation, and sprint planning.</li>
+                <li>Improve automation, accuracy, validation, and stability of systems.</li>
+              </ul>
+            </article>
+
+            <article class="border border-slate-800 rounded-2xl p-5 bg-slate-900/40">
+              <div class="flex justify-between flex-wrap gap-2">
+                <div>
+                  <h3 class="font-semibold text-slate-50">Internal Auditor Manager</h3>
+                  <p class="text-sm text-slate-400">EduGorilla</p>
+                </div>
+                <p class="text-xs text-slate-400">Jan 2025 – Dec 2025</p>
+              </div>
+              <ul class="mt-3 space-y-2 text-sm text-slate-300">
+                <li>Performed audits across AI operations, internal tools, data pipelines.</li>
+                <li>Created SOPs, workflows, and improved quality checks.</li>
+                <li>Improved transparency between QA, product, and operations.</li>
+              </ul>
+            </article>
+
+            <article class="border border-slate-800 rounded-2xl p-5 bg-slate-900/40">
+              <div class="flex justify-between flex-wrap gap-2">
+                <div>
+                  <h3 class="font-semibold text-slate-50">Manual QA Engineer & Senior Auditor</h3>
+                  <p class="text-sm text-slate-400">EduGorilla</p>
+                </div>
+                <p class="text-xs text-slate-400">2023 – 2024</p>
+              </div>
+              <ul class="mt-3 space-y-2 text-sm text-slate-300">
+                <li>Functional, regression & UI testing for internal platforms.</li>
+                <li>Data validation, quality checks, and behavioral testing.</li>
+              </ul>
+            </article>
+
+            <article class="border border-slate-800 rounded-2xl p-5 bg-slate-900/30">
+              <div class="flex justify-between flex-wrap gap-2">
+                <div>
+                  <h3 class="font-semibold text-slate-50">Manager – Pre-Sales, Marketing & QA</h3>
+                </div>
+                <p class="text-xs text-slate-400">2022 – 2023</p>
+              </div>
+              <ul class="mt-3 space-y-2 text-sm text-slate-300">
+                <li>Built teams, improved automation workflows and lead pipelines.</li>
+              </ul>
+            </article>
+
+            <article class="border border-slate-800 rounded-2xl p-5 bg-slate-900/20">
+              <div class="flex justify-between flex-wrap gap-2">
+                <div>
+                  <h3 class="font-semibold text-slate-50">Digital Marketing Executive / Intern</h3>
+                </div>
+                <p class="text-xs text-slate-400">2019 – 2022</p>
+              </div>
+              <ul class="mt-3 space-y-2 text-sm text-slate-300">
+                <li>SEO, ASO, SMM & analytics for internal products.</li>
+              </ul>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- EDUCATION -->
+      <section id="education" class="border-b border-slate-800 bg-slate-950">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <h2 class="text-xl font-semibold text-slate-50 mb-6">Education</h2>
+
+          <div class="border border-slate-800 rounded-2xl p-5 bg-slate-900/50">
+            <h3 class="text-lg font-semibold text-sky-400">
+              Bachelor of Technology (B.Tech) – Computer Science Engineering
+            </h3>
+            <p class="text-sm text-slate-300 mt-1">A.P.J. Abdul Kalam Technical University (AKTU)</p>
+            <p class="text-xs text-slate-400 mt-1">Completed: 2019</p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- LICENSES & CERTIFICATIONS -->
+      <section id="certifications" class="border-b border-slate-800 bg-slate-950">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <h2 class="text-xl font-semibold text-slate-50 mb-6">Licenses & Certifications</h2>
+
+          <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 text-sm">
+
+            <article class="border border-slate-800 rounded-2xl p-5 bg-slate-900/40">
+              <h3 class="font-semibold text-sky-400">Summer Training on Python Programming Language</h3>
+              <p class="text-slate-300 mt-1">A2Z Solutions & Training, Lucknow</p>
+              <p class="text-xs text-slate-400">Issued: Aug 2019</p>
+              <p class="text-xs text-slate-400 mt-2">
+                Skills: Python · Django · Django Web Framework
+              </p>
+            </article>
+
+            <article class="border border-slate-800 rounded-2xl p-5 bg-slate-900/40">
+              <h3 class="font-semibold text-sky-400">
+                Problem Solving Through Programming in C (Online Course)
+              </h3>
+              <p class="text-slate-300 mt-1">NPTEL</p>
+              <p class="text-xs text-slate-400">Issued: Oct 2018</p>
+              <p class="text-xs text-slate-400 mt-2">
+                Skills: C Programming · Problem Solving
+              </p>
+            </article>
+
+            <article class="border border-slate-800 rounded-2xl p-5 bg-slate-900/40">
+              <h3 class="font-semibold text-sky-400">
+                Summer Training & Project Training on ASP.NET MVC with C#
+              </h3>
+              <p class="text-slate-300 mt-1">Softpro India Computer Technologies (P) Ltd.</p>
+              <p class="text-xs text-slate-400">Issued: Jul 2018</p>
+              <p class="text-xs text-slate-400 mt-2">
+                Skills: ASP.NET MVC · Microsoft SQL Server · Visual C#
+              </p>
+            </article>
+
+            <article class="border border-slate-800 rounded-2xl p-5 bg-slate-900/40">
+              <h3 class="font-semibold text-sky-400">Summer Training on C Language</h3>
+              <p class="text-slate-300 mt-1">Code Infotech, Lucknow</p>
+              <p class="text-xs text-slate-400">Issued: Jul 2017</p>
+              <p class="text-xs text-slate-400 mt-2">
+                Skills: C Programming
+              </p>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section id="skills" class="border-b border-slate-800 bg-slate-950">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <h2 class="text-xl font-semibold text-slate-50 mb-6">Skills</h2>
+
+          <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 text-sm">
+            <div class="border border-slate-800 rounded-2xl p-4 bg-slate-900/40">
+              <h3 class="font-semibold text-slate-100 mb-2">AI & Product</h3>
+              <ul class="space-y-1 text-slate-300">
+                <li>AI & LLM Dataset Operations</li>
+                <li>Product Documentation</li>
+                <li>Workflow & Process Design</li>
+                <li>Sprint Planning & Coordination</li>
+              </ul>
+            </div>
+
+            <div class="border border-slate-800 rounded-2xl p-4 bg-slate-900/40">
+              <h3 class="font-semibold text-slate-100 mb-2">QA & Audit</h3>
+              <ul class="space-y-1 text-slate-300">
+                <li>Manual Testing (Functional, Regression, UI)</li>
+                <li>Internal Auditing & Reporting</li>
+                <li>Quality Metrics & Checklists</li>
+              </ul>
+            </div>
+
+            <div class="border border-slate-800 rounded-2xl p-4 bg-slate-900/40">
+              <h3 class="font-semibold text-slate-100 mb-2">Automation & Technical</h3>
+              <ul class="space-y-1 text-slate-300">
+                <li>Python & Selenium</li>
+                <li>Data Scraping & Validation</li>
+                <li>SQL · HTML · CSS</li>
+                <li>Process Automation</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="projects" class="border-b border-slate-800 bg-slate-950">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <h2 class="text-xl font-semibold text-slate-50 mb-6">Selected Work & Projects</h2>
+
+          <div class="grid md:grid-cols-2 gap-6 text-sm">
+
+            <article class="border border-slate-800 rounded-2xl p-5 bg-slate-900/40">
+              <h3 class="font-semibold text-slate-100 mb-2">Multilingual AI Dataset Pipelines</h3>
+              <p class="text-slate-300">
+                Designed guidelines, quality checks, and validation flows to prepare
+                datasets for AI & LLM training across multiple languages.
+              </p>
+            </article>
+
+            <article class="border border-slate-800 rounded-2xl p-5 bg-slate-900/40">
+              <h3 class="font-semibold text-slate-100 mb-2">Automation for Lead Sourcing & QA</h3>
+              <p class="text-slate-300">Python + Selenium automation for scraping and QA validation.</p>
+            </article>
+
+            <article class="border border-slate-800 rounded-2xl p-5 bg-slate-900/40">
+              <h3 class="font-semibold text-slate-100 mb-2">Internal Tools QA & Audit Framework</h3>
+              <p class="text-slate-300">
+                Defined test cases, audit steps, and defect funnels for internal products.
+              </p>
+            </article>
+
+            <article class="border border-slate-800 rounded-2xl p-5 bg-slate-900/40">
+              <h3 class="font-semibold text-slate-100 mb-2">Process Improvement & SOP Design</h3>
+              <p class="text-slate-300">
+                Created SOPs and trained teams on new workflows for consistent execution.
+              </p>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="bg-slate-950">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <h2 class="text-xl font-semibold text-slate-50 mb-2">Contact</h2>
+          <p class="text-sm text-slate-300 mb-4">
+            Open to roles in AI operations, product management, QA, and automation.
+          </p>
+
+          <div class="space-y-2 text-sm text-slate-200">
+            <p><strong>Email:</strong> anusarsrivastava@gmail.com</p>
+            <p><strong>Phone:</strong> +91-7991255922</p>
+            <p><strong>Location:</strong> Lucknow, Uttar Pradesh, India</p>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-slate-800 bg-slate-950">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4 text-xs text-slate-500 flex justify-between flex-wrap gap-2">
+        <span>© <span id="year"></span> Anusar Srivastava. All rights reserved.</span>
+        <span>AI · Product · QA · Automation</span>
       </div>
-    </div>
+    </footer>
 
-    <!-- LEFT TEXT -->
-    <div data-aos="fade-up">
-      <p class="text-sky-400 font-semibold text-sm tracking-widest uppercase">AI • PRODUCT • QA • AUTOMATION</p>
-
-      <h1 class="mt-4 text-4xl md:text-5xl font-bold leading-tight text-white">
-        Technical Associate Product Manager
-      </h1>
-
-      <p class="mt-4 text-gray-300 text-lg leading-relaxed">
-        Working across AI dataset operations, automation engineering, product documentation,
-        internal auditing, and workflow quality — delivering scalable systems and reliable execution.
-      </p>
-
-      <div class="mt-6 flex flex-wrap gap-4">
-        <a href="assets/Anusar_Resume_2025.pdf"
-           class="px-5 py-2.5 rounded-lg bg-sky-500 hover:bg-sky-400 text-black font-medium shadow-md">
-          Download Resume
-        </a>
-
-        <a href="assets/Anusar_Featured_Portfolio.pdf"
-           class="px-5 py-2.5 rounded-lg border border-gray-600 text-white hover:bg-gray-900 shadow-md">
-          View Portfolio
-        </a>
-      </div>
-    </div>
   </div>
-</section>
 
-<!-- ABOUT -->
-<section id="about" class="py-16 border-t border-gray-800" data-aos="fade-up">
-  <div class="max-w-6xl mx-auto px-6">
-    <h2 class="text-3xl font-semibold mb-4">About Me</h2>
-    <p class="text-gray-300 leading-relaxed">
-      I specialize in AI dataset operations, automation engineering, internal auditing, QA testing,
-      and product execution. I help build scalable pipelines, optimize workflows, automate repetitive
-      tasks, and ensure data quality for high-volume AI training environments.
-    </p>
-  </div>
-</section>
-
-<!-- EXPERIENCE -->
-<section id="experience" class="py-16 border-t border-gray-800">
-  <div class="max-w-6xl mx-auto px-6">
-    <h2 class="text-3xl font-semibold mb-10">Experience</h2>
-
-    <div class="relative border-l border-gray-700 ml-4 space-y-12">
-
-      <div class="ml-6" data-aos="fade-up">
-        <div class="absolute -left-2 w-4 h-4 bg-sky-500 border-white border rounded-full"></div>
-        <h3 class="text-xl font-semibold text-sky-400">Technical Associate Product Manager</h3>
-        <p class="text-gray-400 text-sm">Dec 2025 – Present | InfoBay AI (formerly EduGorilla)</p>
-        <p class="mt-2 text-gray-300">Managing AI data workflows, validation systems, automation pipelines, and cross-team coordination.</p>
-      </div>
-
-      <div class="ml-6" data-aos="fade-up">
-        <div class="absolute -left-2 w-4 h-4 bg-sky-500 border-white border rounded-full"></div>
-        <h3 class="text-xl font-semibold text-sky-400">Internal Auditor Manager</h3>
-        <p class="text-gray-400 text-sm">Jan 2025 – Dec 2025</p>
-        <p class="mt-2 text-gray-300">Audited processes, built SOPs, improved dataset quality & workflow efficiency.</p>
-      </div>
-
-      <div class="ml-6" data-aos="fade-up">
-        <div class="absolute -left-2 w-4 h-4 bg-sky-500 border-white border rounded-full"></div>
-        <h3 class="text-xl font-semibold text-sky-400">Manual QA Engineer & Senior Auditor</h3>
-        <p class="text-gray-400 text-sm">2023 – 2024</p>
-        <p class="mt-2 text-gray-300">Performed functional, UI, regression & data validation testing for internal systems.</p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- SKILLS -->
-<section id="skills" class="py-16 border-t border-gray-800" data-aos="fade-up">
-  <div class="max-w-6xl mx-auto px-6">
-    <h2 class="text-3xl font-semibold mb-10">Skills</h2>
-
-    <div class="grid md:grid-cols-3 gap-6">
-
-      <div class="p-6 rounded-xl bg-gray-900 border border-gray-700 tilt-card">
-        <h3 class="text-lg font-semibold mb-3">AI & Product</h3>
-        <p class="text-sm">AI Dataset Ops</p>
-        <div class="h-2 bg-gray-800 rounded mt-1"><div class="h-full w-[90%] bg-sky-500 rounded"></div></div>
-
-        <p class="text-sm mt-4">Product Requirements</p>
-        <div class="h-2 bg-gray-800 rounded mt-1"><div class="h-full w-[85%] bg-sky-500 rounded"></div></div>
-      </div>
-
-      <div class="p-6 rounded-xl bg-gray-900 border border-gray-700 tilt-card">
-        <h3 class="text-lg font-semibold mb-3">QA & Audit</h3>
-        <p class="text-sm">Functional Testing</p>
-        <div class="h-2 bg-gray-800 rounded mt-1"><div class="h-full w-[90%] bg-emerald-500 rounded"></div></div>
-
-        <p class="text-sm mt-4">Internal Auditing</p>
-        <div class="h-2 bg-gray-800 rounded mt-1"><div class="h-full w-[85%] bg-emerald-500 rounded"></div></div>
-      </div>
-
-      <div class="p-6 rounded-xl bg-gray-900 border border-gray-700 tilt-card">
-        <h3 class="text-lg font-semibold mb-3">Automation</h3>
-        <p class="text-sm">Python Automation</p>
-        <div class="h-2 bg-gray-800 rounded mt-1"><div class="h-full w-[88%] bg-violet-500 rounded"></div></div>
-
-        <p class="text-sm mt-4">Selenium</p>
-        <div class="h-2 bg-gray-800 rounded mt-1"><div class="h-full w-[80%] bg-violet-500 rounded"></div></div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- PROJECTS -->
-<section id="projects" class="py-16 border-t border-gray-800">
-  <div class="max-w-6xl mx-auto px-6" data-aos="fade-up">
-    <h2 class="text-3xl font-semibold mb-10">Projects</h2>
-
-    <div class="grid md:grid-cols-2 gap-6">
-
-      <div class="p-6 rounded-xl bg-gray-900 border border-gray-700 tilt-card" onclick="openModal('project1')">
-        <h3 class="text-lg font-semibold mb-2">AI Dataset Pipelines</h3>
-        <p class="text-gray-300 text-sm">Built validation flows for multilingual AI datasets.</p>
-      </div>
-
-      <div class="p-6 rounded-xl bg-gray-900 border border-gray-700 tilt-card" onclick="openModal('project2')">
-        <h3 class="text-lg font-semibold mb-2">Automation Tools</h3>
-        <p class="text-gray-300 text-sm">Python + Selenium automation for QA and workflow optimization.</p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- CERTIFICATIONS -->
-<section id="certifications" class="py-16 border-t border-gray-800" data-aos="fade-up">
-  <div class="max-w-6xl mx-auto px-6">
-    <h2 class="text-3xl font-semibold mb-10">Certifications</h2>
-
-    <div class="grid md:grid-cols-3 gap-6">
-
-      <div class="p-6 rounded-xl bg-gray-900 border border-gray-700 tilt-card">
-        <h3 class="text-lg font-semibold text-sky-400">Product Management Fundamentals</h3>
-        <p class="text-sm text-gray-300 mt-2">LinkedIn Learning</p>
-      </div>
-
-      <div class="p-6 rounded-xl bg-gray-900 border border-gray-700 tilt-card">
-        <h3 class="text-lg font-semibold text-sky-400">Python for Automation</h3>
-        <p class="text-sm text-gray-300 mt-2">Coursera</p>
-      </div>
-
-      <div class="p-6 rounded-xl bg-gray-900 border border-gray-700 tilt-card">
-        <h3 class="text-lg font-semibold text-sky-400">Software QA Testing</h3>
-        <p class="text-sm text-gray-300 mt-2">Udemy</p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="py-16 border-t border-gray-800" data-aos="fade-up">
-  <div class="max-w-6xl mx-auto px-6">
-    <h2 class="text-3xl font-semibold mb-4">Contact</h2>
-
-    <p class="text-gray-300 text-sm">Feel free to reach out</p>
-
-    <div class="mt-4 text-sm text-gray-400">
-      <p><strong>Email:</strong> anusarsrivastava@gmail.com</p>
-      <p><strong>Location:</strong> Lucknow, Uttar Pradesh, India</p>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="py-6 border-t border-gray-800 text-center text-gray-500 text-xs">
-  © <span id="year"></span> Anusar Srivastava — AI • Product • QA • Automation
-</footer>
-
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
-
-<!-- Project Modals -->
-<div id="modal-bg" class="fixed inset-0 hidden bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center">
-  <div id="modal-box" class="bg-gray-900 border border-gray-700 rounded-xl p-6 w-[90%] max-w-lg shadow-xl scale-95 opacity-0 transition">
-    <h3 id="modal-title" class="text-xl font-semibold text-sky-400"></h3>
-    <p id="modal-desc" class="text-gray-300 mt-3"></p>
-    <p id="modal-tech" class="text-gray-400 text-sm mt-3"></p>
-
-    <button onclick="closeModal()" class="w-full mt-6 px-4 py-2 border border-gray-700 rounded hover:bg-gray-800">
-      Close
-    </button>
-  </div>
-</div>
-
-<script>
-  const modalBG = document.getElementById("modal-bg");
-  const modalBox = document.getElementById("modal-box");
-
-  const modalData = {
-    project1: {
-      title: "AI Dataset Pipelines",
-      desc: "Designed dataset validation flows for multilingual AI workloads. Improved quality consistency and ensured readiness for LLM training.",
-      tech: "Python, Dataset Validation, Internal Tools"
-    },
-    project2: {
-      title: "Automation Tools",
-      desc: "Built Selenium & Python automation for QA flows, metadata sorting, batching, extraction and workflow accuracy.",
-      tech: "Python, Selenium, Automation Frameworks"
-    }
-  };
-
-  function openModal(key) {
-    const data = modalData[key];
-    document.getElementById("modal-title").innerText = data.title;
-    document.getElementById("modal-desc").innerText = data.desc;
-    document.getElementById("modal-tech").innerText = "Tech: " + data.tech;
-
-    modalBG.classList.remove("hidden");
-    setTimeout(() => modalBox.classList.remove("scale-95", "opacity-0"), 10);
-  }
-
-  function closeModal() {
-    modalBox.classList.add("scale-95", "opacity-0");
-    setTimeout(() => modalBG.classList.add("hidden"), 200);
-  }
-</script>
-
-<!-- AOS Init -->
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script> AOS.init({ duration: 900, once: true }); </script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 
 </body>
 </html>
